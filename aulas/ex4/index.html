@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaja</title>
+    <style>
+        #quadrado{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            line-height: 200px;
+            font-family: sans-serif;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado">
+        Interaja.</div>
+
+        <script>
+            let interaja = document.getElementById('quadrado')
+            interaja.addEventListener('click', clicar)
+
+            interaja.addEventListener('mouseenter', entrar)
+
+            interaja.addEventListener('mouseout', sair)
+
+            function clicar(){
+                interaja.innerText = 'Clicou!'
+                interaja.style.background = 'red'
+            }
+
+            function entrar(){
+                interaja.innerText = 'Entrou!'
+                interaja.style.background = 'yellow'
+            }
+
+            function sair(){
+                interaja.innerText = 'Saiu!'
+                interaja.style.background = 'green'
+            }
+        </script>
+</body>
+</html>

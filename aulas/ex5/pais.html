@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu País.</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" name="botao" id="botao" value="confirmar" onclick="confirmar()">
+    <div id="res"></div>
+
+    <script>
+        function confirmar() {
+            let pais = document.getElementById('pais').value;
+            let res = document.getElementById('res');
+
+            if (pais === 'Brasil') {
+
+                res.innerHTML = "Você é <strong>brasileiro</strong>";
+
+                
+            } else {
+                res.innerHTML = 'Você é <strong>estrangeiro</strong>';
+            }
+        }
+    </script>
+</body>
+</html>
