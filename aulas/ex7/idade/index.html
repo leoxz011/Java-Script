@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Sua Idade</title>
 </head>
+
 <body>
     <header>
         <h1>Quantos anos você tem?</h1>
-        <section>
-            <div id="data">
-                <label for="ano">Ano que você nasceu:</label> <input id="ano" name="ano" type="number"><input type="button" name="verificar" id="verificar" value="Verificar" onclick="checar()">
-            </div>
-                <div><img src="grupo.png" alt="Grupo">
-                </div>
-
-                <div id="msg">
-                    você é tal e tem tal idade
-                </div>
-        </section>
     </header>
+    <section>
+        <div id="data">
+
+            <p><label for="txtano">Ano que você nasceu:</label> <input id="txtano" name="ano" type="number"></p>
+
+            <p>
+                Seu sexo: <input type="radio" id="masc" name="sexo" checked><label for="masc">Masculino</label>
+
+                <input type="radio" id="fem" name="sexo"><label for="fem">Feminino</label>
+            </p>
+
+            <input type="button" name="verificar" id="verificar" value="Verificar" onclick="verificar()">
+
+        </div>
+
+        <div id="res"></div>
+
+    </section>
+
+    <script src="javascript.js"></script>
 </body>
+
 </html>

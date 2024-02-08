@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(15, 98, 250, 0.685);
+    color: rgb(255, 249, 249);
+    font-family: sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+#foto{
+    padding-top: 20px;
+}
+
+#msg{
+    padding-top: 20px;
+}
