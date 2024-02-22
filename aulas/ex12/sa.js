@@ -17,6 +17,7 @@ function adicionar() {
         const item = document.createElement('option');
         item.text = `O valor ${num.value} foi adicionado.`;
         lista.appendChild(item);
+        res.innerHTML = ''
     } else {
         alert('Número inválido ou já adicionado!');
     }
@@ -26,14 +27,30 @@ function adicionar() {
 
 function finalizar() {
     if (valores.length == 0) {
-alert('adicione valores antes de finalizar')
+        alert('adicione valores antes de finalizar')
     } else {
-        let tot = valores.length
+        let total = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for (let pos in valores) {
+            soma += valores[pos]
+            if (valores[pos] > maior) {
+                maior = valores[pos]
+            } if (valores[pos] < menor) {
+                menor = valores[pos]
+            }
+        }
 
 
-
-        res.innerHTML =''
-        res.innerHTML += `Ao todo, temos ${tot} valores cadastrados.`
+        media = soma / total
+        res.innerHTML = ''
+        res.innerHTML += `<p> Ao todo, temos ${total} valores cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor adicionado é ${maior}</p>`
+        res.innerHTML += `<p>O menor valor adicionado é ${menor}</p>`
+        res.innerHTML += `<p>Somando todos os valores temos ${soma}</p>`
+        res.innerHTML += `A média entre os valores é ${media}`
     }
 
 }
